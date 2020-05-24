@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block body %}
+    <h1>Profile</h1>
+
+    {{ form_start(userForm) }}
+        {{ form_row(userForm.username) }}
+        {{ form_row(userForm.name) }}
+        {{ form_row(userForm.lastname) }}
+        {{ form_row(userForm.company) }}
+        {{ form_row(userForm.email) }}
+        {{ form_row(userForm.phone) }}
+
+        <button type="submit" class="btn btn-primary">Update my profile</button>
+    {{ form_end(userForm) }}
+{% endblock %}

@@ -39,7 +39,7 @@ class User implements UserInterface
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $Name;
+    private $name;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -49,7 +49,7 @@ class User implements UserInterface
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $Company;
+    private $company;
 
     /**
      * @ORM\Column(type="text", nullable=true)
@@ -136,12 +136,12 @@ class User implements UserInterface
 
     public function getName(): ?string
     {
-        return $this->Name;
+        return $this->name;
     }
 
-    public function setName(?string $Name): self
+    public function setName(?string $name): self
     {
-        $this->Name = $Name;
+        $this->name = $name;
 
         return $this;
     }
@@ -160,12 +160,12 @@ class User implements UserInterface
 
     public function getCompany(): ?string
     {
-        return $this->Company;
+        return $this->company;
     }
 
-    public function setCompany(?string $Company): self
+    public function setCompany(?string $company): self
     {
-        $this->Company = $Company;
+        $this->company = $company;
 
         return $this;
     }
