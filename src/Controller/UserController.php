@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Form\UserType;
+use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -13,7 +14,7 @@ class UserController extends AbstractController
     /**
      * @Route("/profile", name="user_profile")
      */
-    public function index(EntityManagerInterface $entityManager, Request $request)
+    public function profile(EntityManagerInterface $entityManager, Request $request)
     {
         $user = $this->getUser();
 
@@ -31,4 +32,18 @@ class UserController extends AbstractController
             'userForm' => $form->createView(),
         ]);
     }
+
+    /**
+     * @Route("/users", name="users")
+     */
+    public function index(UserRepository $userRepository)
+    {
+        $users = $userRepository->findAll();
+
+        return $this->render('user/index.html.twig', [
+            'users' => $users,
+        ]);
+    }
 }
+
+
