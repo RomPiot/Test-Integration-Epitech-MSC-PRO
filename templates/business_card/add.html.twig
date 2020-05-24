@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello BusinessCardController!{% endblock %}
+
+
+{% block body %}
+    <h1>Add Business Card</h1>
+
+    {{ form_start(businessCardForm) }}
+        {{ form_row(businessCardForm.name) }}
+        {{ form_row(businessCardForm.company) }}
+        {{ form_row(businessCardForm.email) }}
+        {{ form_row(businessCardForm.phone) }}
+
+        <button type="submit" class="btn btn-primary">Register</button>
+    {{ form_end(businessCardForm) }}
+{% endblock %}

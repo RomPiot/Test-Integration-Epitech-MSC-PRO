@@ -13,3 +13,14 @@
     }
 }
  
+.no-click {
+    pointer-events: none
+}
+
+.business-card {
+    padding-bottom: 15px;
+    cursor: pointer;
+    &:hover {
+        background-color: grey;
+    }
+}

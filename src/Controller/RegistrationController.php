@@ -18,7 +18,7 @@ class RegistrationController extends AbstractController
     public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder): Response
     {
         if ($this->getUser()) {
-            return $this->redirectToRoute('homepage');
+            return $this->redirectToRoute('business_card');
         }
 
         $user = new User();
@@ -40,7 +40,7 @@ class RegistrationController extends AbstractController
 
             // do anything else you need here, like send an email
 
-            return $this->redirectToRoute('homepage');
+            return $this->redirectToRoute('business_card');
         }
 
         return $this->render('registration/register.html.twig', [
