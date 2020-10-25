@@ -2,4 +2,8 @@
 ## Objectifs
 4h pour réaliser une application de mise en relation professionnelle <br>
 Langage au choix, j'ai choisi Symfony
+## Installation
+- Téléchager le repo
+- `composer install`
+- `Composer serve`
 ### Validé
